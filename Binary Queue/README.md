@@ -1,11 +1,11 @@
 ### Traversal Techniques
-- Inorder Traversal
+- In-order Traversal
   - Left - Root - Right
-- Preorder Traversal
+- Pre-order Traversal
   - Root - Left - Right
-- Postorder Traversal
-  Left - Right - Root
-- Levelorder Traversal
+- Post-order Traversal
+  - Left - Right - Root
+- Level-order Traversal
   - Uses Queue
   - Breath First Search
 
