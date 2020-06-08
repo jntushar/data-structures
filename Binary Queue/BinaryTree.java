@@ -120,7 +120,7 @@ class Main{
  * 
  *  Output:
  *  		Inorder Traversal of tree is: 2, 4, 5, 7, 6, 8 
- *			Preorder Traversal of tree is: 5, 4, 2, 6, 7, 8 
- *			Postorder Traversal of tree is: 2, 4, 7, 8, 6, 5 
+ *		Preorder Traversal of tree is: 5, 4, 2, 6, 7, 8 
+ *		Postorder Traversal of tree is: 2, 4, 7, 8, 6, 5 
  *   		Levelorder Traversal of tree is: 5, 4, 6, 2, 7, 8
  */   
