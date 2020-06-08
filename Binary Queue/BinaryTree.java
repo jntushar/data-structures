@@ -1,6 +1,4 @@
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Scanner;
+import java.util.*;
 
 class Node{
 	 int data;
@@ -61,8 +59,30 @@ public class BinaryTree {
 	}
 	
 	public void levelorderTraversal(Node root) {
+		//base case
+		if(root == null)
+			return;
 		
-	}	
+		Queue<Node> que = new LinkedList<>();
+		que.add(root);
+		
+		while(true) {
+			int nodeCount = que.size();
+			if(nodeCount == 0)
+				break;
+			
+			while(nodeCount > 0) {
+				Node node = que.peek();
+				System.out.print(node.data + ", ");
+				que.remove();
+				if(node.left != null)
+					que.add(node.left);
+				if(node.right != null)
+					que.add(node.right);
+				nodeCount--;
+			}
+		}
+	}
 }
 
 class Main{
@@ -83,8 +103,24 @@ class Main{
 		tree.postorderTraversal(root);
 		System.out.println();
 		
-		System.out.println("Levelorder Traversal of tree is: ");
+		System.out.print("Levelorder Traversal of tree is: ");
 		tree.levelorderTraversal(root);	
 		System.out.println();
 	}
 }
+
+/*
+ *        5
+ *       / \
+ *      4   6
+ *     /   / \
+ *    2   7   8
+ *    
+ * Input: 5 4 2 -1 -1 -1 6 7 -1 -1 8 -1 -1
+ * 
+ *  Output:
+ *  		Inorder Traversal of tree is: 2, 4, 5, 7, 6, 8 
+ *			Preorder Traversal of tree is: 5, 4, 2, 6, 7, 8 
+ *			Postorder Traversal of tree is: 2, 4, 7, 8, 6, 5 
+ *   		Levelorder Traversal of tree is: 5, 4, 6, 2, 7, 8
+ */   
