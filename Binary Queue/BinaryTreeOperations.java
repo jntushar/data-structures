@@ -57,14 +57,23 @@ public class BinaryTreeOperations {
 		return false;
 	}
 	
-	public void printNthLevel(Node root, int n) {
+	public void printNthLevel(Node root, int n) {  // root node is level 0
 		if(root == null)
 			return;
-		if(k == 0)
-			System.out.println(root.data);
+		if(n == 0)
+			System.out.print(root.data + " ");
 		
 		printNthLevel(root.left, n-1);
 		printNthLevel(root.right, n-1);
+	}
+	
+	public int heightOfTree(Node root) {
+		if(root ==  null)
+			return 0;
+		
+		int leftHeight = heightOfTree(root.left);
+		int rightHeight = heightOfTree(root.right);
+		return Math.max(leftHeight, rightHeight) + 1;
 	}
 }
 
@@ -80,5 +89,7 @@ class Main{
 			System.out.println("Node not found");
 		
 		tree.printNthLevel(root, 2);
+		
+		System.out.println("\n" + tree.heightOfTree(root));
 	}
 }
