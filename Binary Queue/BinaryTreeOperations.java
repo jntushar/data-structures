@@ -56,6 +56,16 @@ public class BinaryTreeOperations {
 		//System.out.println("Node not found");
 		return false;
 	}
+	
+	public void printNthLevel(Node root, int n) {
+		if(root == null)
+			return;
+		if(k == 0)
+			System.out.println(root.data);
+		
+		printNthLevel(root.left, n-1);
+		printNthLevel(root.right, n-1);
+	}
 }
 
 class Main{
@@ -68,5 +78,7 @@ class Main{
 			System.out.println("Node is found");
 		else
 			System.out.println("Node not found");
+		
+		tree.printNthLevel(root, 2);
 	}
 }
