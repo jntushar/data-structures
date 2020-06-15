@@ -1,3 +1,6 @@
+### Binary Tree
+- In Binary Tree each node zero, one or two child nodes
+
 ### Traversal Techniques
 - In-order Traversal
   - Left - Root - Right
