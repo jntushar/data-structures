@@ -105,3 +105,19 @@ class Main{
 		System.out.println("Diameter of the tree: " + tree.diameterOfTree(root));
 	}
 }
+
+/*
+ *        5
+ *       / \
+ *      4   6
+ *     /   / \
+ *    2   7   8
+ *    
+ * Input: 5 4 2 -1 -1 -1 6 7 -1 -1 8 -1 -1
+ * 
+ *  Output:
+ *		Node is found
+ *		2 7 8 
+ *		Height of the tree: 3
+ *		Diameter of the tree: 6
+ */
