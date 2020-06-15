@@ -75,6 +75,16 @@ public class BinaryTreeOperations {
 		int rightHeight = heightOfTree(root.right);
 		return Math.max(leftHeight, rightHeight) + 1;
 	}
+	
+	public int diameterOfTree(Node root) {
+		if(root == null)
+			return 0;
+		
+		int diameter_1 = heightOfTree(root.left) + heightOfTree(root.right);
+		int diameter_2 = diameterOfTree(root.left) + diameterOfTree(root.right);
+		return Math.max(diameter_1, diameter_2) + 1;
+		
+	}
 }
 
 class Main{
@@ -90,6 +100,8 @@ class Main{
 		
 		tree.printNthLevel(root, 2);
 		
-		System.out.println("\n" + tree.heightOfTree(root));
+		System.out.println("\n" + "Height of the tree: " + tree.heightOfTree(root));
+		
+		System.out.println("Diameter of the tree: " + tree.diameterOfTree(root));
 	}
 }
