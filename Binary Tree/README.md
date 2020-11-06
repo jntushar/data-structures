@@ -1,5 +1,5 @@
 ### Binary Tree
-- In Binary Tree each node zero, one or two child nodes
+- In Binary Tree each node has zero, one or two child nodes
 
 ### Traversal Techniques
 - In-order Traversal
